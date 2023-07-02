@@ -1,5 +1,6 @@
 import { Category, Android, Briefcase, Notification, Trade, Setting } from 'iconsax-react'
 
+
 const NavbarItems = [
     {
         icon: <Category color='#FFFFFF' />,

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { OpenSider, ClosedSider } from "./Index";
+import { Sider } from "./Index";
 
 
 
@@ -7,8 +7,8 @@ const Layout = ({ children }) => {
 
   
   return (
-    <div className='grid grid-cols-12'>
-      <OpenSider/>
+    <div className=''>
+      <Sider/>
       {children}
 
     </div>
