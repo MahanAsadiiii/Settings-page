@@ -43,8 +43,8 @@ const Sider = () => {
                 </div>
                 {NavbarItems.map((item) => {
                     return (
-                        <div  >
-                            <li className='flex items-center font-normal my-3 text-[#f2f3f3] font-[poppins]'>
+                        <div>
+                            <li key={item.id} className='flex items-center font-normal my-3 text-[#f2f3f3] font-[poppins]'>
                                 <div className={`NavIcon w-1 bg-[#4BA663] rounded-2xl `}></div>
                                 <div className="bg-[#12181D] p-2 mx-4 rounded-lg">
                                     {item.icon}
