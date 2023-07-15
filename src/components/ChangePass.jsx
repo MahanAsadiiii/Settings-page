@@ -44,7 +44,7 @@ function ChangePass(props) {
 
     return (
         <div className={`mt-6 `}>
-            <div className={`flex justify-evenly items-center border-[#282C30] border-solid border-2 rounded-2xl ${props.className}`}>
+            <div className={`flex justify-evenly items-center border-[#282C30] border-solid border-2 rounded-2xl dark:bg-[#212226] dark:text-white bg-[#F2F3F3] text-black`}>
                 <div className={`flex items-center py-6 px-20 `}>
                     <Lock1 size={32} />
                     <div className="ml-4">
@@ -69,7 +69,7 @@ function ChangePass(props) {
                     </div>
                 </div>
             </div>
-            <div className={`mt-6 pt-10 pb-6 px-6 bg-[#212226] rounded-2xl ${props.className}`}>
+            <div className={`mt-6 pt-10 pb-6 px-6 dark:bg-[#212226] rounded-2xl  dark:text-white bg-[#F2F3F3] text-black`}>
                 <div className="flex items-center">
                     <div className="bg-[#4BA663] h-6 w-1 rounded-2xl"></div>
                     <h2 className='ml-2 text-base font-[poppins] font-normal'>Change Password</h2>

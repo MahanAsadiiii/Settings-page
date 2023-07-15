@@ -10,10 +10,10 @@ const Sider = () => {
     };
 
     return (
-        <div className={`relative flex flex-col justify-between h-screen max-h-screen p-4 bg-[#111418] tran ease-in-out duration-500 ${open ? "w-3/12 " : "items-center w-1/12"} `}>
+        <div className={`relative flex flex-col justify-between h-screen max-h-screen p-4 bg-[#F2F3F3] dark:bg-[#111418] tran ease-in-out duration-500 ${open ? "w-3/12 " : "items-center w-1/12"} `}>
 
             <div>
-                <div className={`flex flex-col items-center bg-[#2B333D] px-5 pt-8 pb-5 rounded-2xl mb-5 mt-12 ${!open && "hidden"}`}>
+                <div className={`flex flex-col items-center dark:bg-[#212226] bg-white px-5 pt-8 pb-5 rounded-2xl mb-5 mt-12 ${!open && "hidden"}`}>
                     <div className="-mt-20">
                         <img src={profile} sizes='22px' alt="" />
                     </div>
@@ -44,7 +44,7 @@ const Sider = () => {
                 {NavbarItems.map((item) => {
                     return (
                         <div>
-                            <li key={item.id} className='flex items-center font-normal my-3 text-[#f2f3f3] font-[poppins]'>
+                            <li key={item.id} className='flex items-center font-normal my-3 dark:text-[#f2f3f3] text-black font-[poppins]'>
                                 <div className={`NavIcon w-1 bg-[#4BA663] rounded-2xl `}></div>
                                 <div className="bg-[#12181D] p-2 mx-4 rounded-lg">
                                     {item.icon}
@@ -56,7 +56,7 @@ const Sider = () => {
                 })}
             </div>
             <div className=''>
-                <div className='flex items-center text-base font-normal text-[#f2f3f3]'>
+                <div className='flex items-center text-base font-normal dark:text-[#f2f3f3] text-black'>
                     <div className='w-1 bg-[#D0585F] rounded-2xl h-10'></div>
                     <div className="bg-[#D0585F] p-2 mx-4 rounded-lg">
                         <LogoutCurve color='#FFFFFF' />
