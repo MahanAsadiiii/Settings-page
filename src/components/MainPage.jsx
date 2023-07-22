@@ -7,12 +7,12 @@ import { Lock1, BuyCrypto, Wallet1 } from "iconsax-react"
 
 function MainPage() {
 
-  const onChange = () => {
+  const themeChange = () => {
     setTheme(theme === "dark" ? "light" : "dark")
   };
 
-  const [bg, setBg] = useState()
-  const [theme, setTheme] = useState('light')
+  const [bg, setBg] = useState(1)
+  const [theme, setTheme] = useState('dark')
 
   useEffect(() => {
     if (theme === "dark") {
@@ -22,7 +22,6 @@ function MainPage() {
     }
   }, [theme])
   const contetntHandler=(index) =>{
-    console.log(index);
     setBg(index)
   }
 
@@ -32,7 +31,7 @@ function MainPage() {
       <div className={`flex justify-between `}>
         <h2 className='text-3xl font-normal font-[poppins]'>Settings</h2>
         <div className={`flex items-center rounded-3xl w-16 h-10 p-1 justify-end dark:bg-[#535B62] bg-yellow-400 }`}>
-          <div onClick={onChange} className={`bg-[#212226] rounded-full flex items-center p-2 duration-500 ${theme === "dark" && "-translate-x-6"}`}>
+          <div onClick={themeChange} className={`bg-[#212226] rounded-full flex items-center p-2 duration-500 ${theme === "dark" && "-translate-x-6"}`}>
             {theme === "light" ? <Sun1 color="#ffffff" size="16" /> : <Moon color="#ffffff" size="16" />}
           </div>
         </div>

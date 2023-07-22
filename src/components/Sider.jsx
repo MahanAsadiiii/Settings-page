@@ -5,7 +5,7 @@ import NavbarItems from './Static';
 
 const Sider = () => {
     const [open, setopen] = useState(true)
-    const [clickState, setClickState] = useState()
+    const [clickState, setClickState] = useState(5)
     
     const handleNav = () => {
         setopen(!open);

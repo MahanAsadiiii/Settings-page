@@ -1,19 +1,18 @@
 import React, { useState } from 'react'
-import { Lock1, BuyCrypto, Wallet1 } from "iconsax-react"
 import { Input, Form } from 'antd';
 
 function ChangePass(props) {
-    const [password, setPassword] = useState('');
 
-    // const [inputValue, setInputValue] = useState(false);
     const [eightError, setEight] = useState(false);
     const [combinationError, setCombination] = useState(false);
     const [lowerAndUpperError, setlowerAndUpper] = useState(false);
+    const [passwordPower, setPasswordPower] = useState(0)
     const firstUserInput = ''
     const secondUserInput = ''
-    var passwordPower = 0
 
-    const handleChange = (value, securityNum) => {
+
+
+    const handleChange = (value) => {
         const lower = new RegExp('(?=.*[a-z])')
         const upper = new RegExp('(?=.*[A-Z])')
         const num = new RegExp('(?=.*[0-9])')
@@ -41,18 +40,14 @@ function ChangePass(props) {
         } else {
             setCombination(false)
         }
-        console.log(powerCounter);
-        passwordPower = powerCounter
-        console.log(passwordPower);
-        return passwordPower;
+        // console.log(powerCounter);
+        setPasswordPower(powerCounter);
 
     };
 
     const checkHandler = (value) => {
-        console.log(value);
+        
     }
-
-
 
     return (
         <div className={`mt-6 `}>
@@ -64,9 +59,9 @@ function ChangePass(props) {
                 </div>
                 <div className="flex gap-6 justify-between mt-8">
                     <Form className="w-1/2 mr-6" >
-                        <Input.Password placeholder='Old Password' className='px-5 py-3 ' />
-                        <Input.Password placeholder='New Password' className='my-6 px-5 py-3 ' onChange={(e) => handleChange(e.target.value)} />
-                        <Input.Password placeholder='Confirm password' className='px-5 py-3' onChange={(e) => checkHandler(e.target.value)} />
+                        <Input.Password placeholder='Old Password' className='px-5 py-3 bg-[#2B333D] border-[#2B333D] passwordInput' />
+                        <Input.Password placeholder='New Password' className='my-6 px-5 py-3 bg-[#2B333D] border-[#2B333D] passwordInput' onChange={(e) => handleChange(e.target.value)} />
+                        <Input.Password placeholder='Confirm password' className='px-5 py-3 bg-[#2B333D] border-[#2B333D] passwordInput' onChange={(e) => checkHandler(e.target.value)} />
                         <button className='mt-6 w-full py-4 bg-[#4BA663] rounded-lg font-lg font-bold font-[roboto] text-white'>Change Password</button>
                     </Form>
                     <div className="w-1/2">
@@ -86,10 +81,10 @@ function ChangePass(props) {
                                 <h4 className='text-[#535B62] text-lg font-medium'>Weak</h4>
                             </div>
                             <div className="flex justify-evenly gap-3">
-                                <div className={`bg-gradient-to-r ${ passwordPower === 3 ? "from-[#c5c5c5] to-[#f3f3f3]" : "from-[#D0585F] to-[#E99C53]"} w-1/4 h-3 rounded-2xl`}></div>
-                                <div className={`bg-gradient-to-r ${ passwordPower === 3 ? "from-[#c5c5c5] to-[#f3f3f3]" : "from-[#ECA551] to-[#FDD448]"} w-1/4 h-3 rounded-2xl`}></div>
-                                <div className={`bg-gradient-to-r ${ passwordPower === 2 ? "from-[#c5c5c5] to-[#f3f3f3]" : "from-[#F5D449] to-[#B0C154]"} w-1/4 h-3 rounded-2xl`}></div>
-                                <div className={`bg-gradient-to-r ${ passwordPower === 1 ? "from-[#c5c5c5] to-[#f3f3f3]" : "from-[#A2BE56] to-[#5BAB61]"} w-1/4 h-3 rounded-2xl`}></div>
+                                <div className={`bg-gradient-to-r ${passwordPower < 3 ? "from-[#c5c5c5] to-[#f3f3f3]" : "from-[#D0585F] to-[#E99C53]"} w-1/4 h-3 rounded-2xl`}></div>
+                                <div className={`bg-gradient-to-r ${passwordPower < 3 ? "from-[#c5c5c5] to-[#f3f3f3]" : "from-[#ECA551] to-[#FDD448]"} w-1/4 h-3 rounded-2xl`}></div>
+                                <div className={`bg-gradient-to-r ${passwordPower < 2 ? "from-[#c5c5c5] to-[#f3f3f3]" : "from-[#F5D449] to-[#B0C154]"} w-1/4 h-3 rounded-2xl`}></div>
+                                <div className={`bg-gradient-to-r ${passwordPower < 1 ? "from-[#c5c5c5] to-[#f3f3f3]" : "from-[#A2BE56] to-[#5BAB61]"} w-1/4 h-3 rounded-2xl`}></div>
                             </div>
                         </div>
                     </div>
