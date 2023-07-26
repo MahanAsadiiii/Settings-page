@@ -7,15 +7,26 @@ body {
 }
 
 .passwordInput>input::placeholder {
+    color: rgb(0, 0, 0);
+    font-family: Roboto;
+}
+.dark .passwordInput>input::placeholder {
     color: white;
     font-family: Roboto;
 }
 
 .passwordInput>span>span{
+    color: rgb(2, 2, 2) !important;
+}
+.dark .passwordInput>span>span{
     color: white !important;
 }
 
 .passwordInput>input {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+.dark .passwordInput>input {
     background-color: #2B333D;
     color: white;
 }
