@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Moon, Sun1 } from 'iconsax-react'
 import { ChangePass, Lorem } from './Index';
 import { Lock1, BuyCrypto, Wallet1 } from "iconsax-react"
-import {  Route, Routes,Link } from 'react-router-dom'
+import {  Route, Routes ,Link ,Navigate } from 'react-router-dom'
 
 
 function MainPage() {
@@ -37,7 +37,7 @@ function MainPage() {
         </div>
       </div>
       <div className={`flex justify-evenly items-center border-[#282C30] border-solid border-2 rounded-2xl dark:bg-[#12181D] dark:text-white bg-[#FFFFFF] text-black mt-6 p-1`}>
-        <Link href="/pass"onClick={() => contetntHandler(1)} to='/change-password' className={`${ bg === 1 ? "dark:bg-[#212226] bg-[#F2F3F3]" : "" } flex items-center w-full py-6 px-20 rounded-2xl`}>
+        <Link onClick={() => contetntHandler(1)} to='/setting' className={`${ bg === 1 ? "dark:bg-[#212226] bg-[#F2F3F3]" : "" } flex items-center w-full py-6 px-20 rounded-2xl`}>
           <Lock1 size={32} />
           <div className="ml-4">
             <h3 className='text-base font-normal font-[poppins]'>Security</h3>
@@ -45,7 +45,7 @@ function MainPage() {
           </div>
         </Link>
         <div className="w-0.5 bg-[#282C30] h-16 m-1"></div>
-        <Link onClick={() => contetntHandler(2)} to='/lorem' className={`${ bg === 2 ? "dark:bg-[#212226] bg-[#F2F3F3]" : "" } flex items-center w-full py-6 px-20 rounded-2xl`}>
+        <Link onClick={() => contetntHandler(2)} to='/setting/lorem' className={`${ bg === 2 ? "dark:bg-[#212226] bg-[#F2F3F3]" : "" } flex items-center w-full py-6 px-20 rounded-2xl`}>
           <BuyCrypto size={32} />
           <div className="ml-4">
             <h3 className='text-base font-normal font-[poppins]'>API</h3>
@@ -53,7 +53,7 @@ function MainPage() {
           </div>
         </Link>
         <div className="w-0.5 bg-[#282C30] h-16 m-1"></div>
-        <Link onClick={() => contetntHandler(3)} to='/lorem' className={`${ bg === 3 ? "dark:bg-[#212226] bg-[#F2F3F3]" : "" } flex items-center w-full py-6 px-20 rounded-2xl`}>
+        <Link onClick={() => contetntHandler(3)} to='/setting/lorem' className={`${ bg === 3 ? "dark:bg-[#212226] bg-[#F2F3F3]" : "" } flex items-center w-full py-6 px-20 rounded-2xl`}>
           <Wallet1 size={32} />
           <div className="ml-4">
             <h3 className='text-base font-normal font-[poppins]'>Lorem Ipsum</h3>
@@ -63,8 +63,8 @@ function MainPage() {
       </div>
       <>
       <Routes>
-        <Route path='/change-password' element={<ChangePass />} />
-        <Route path='/lorem' element={<Lorem/>} />
+        <Route index path='/setting/' element={<ChangePass />} />
+        <Route path='/setting/lorem' element={<Lorem/>} />
       </Routes>
       </>
 

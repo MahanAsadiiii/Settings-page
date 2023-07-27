@@ -112,10 +112,10 @@ function ChangePass() {
                                 <h4 className='text-[#535B62] text-lg font-medium'>Weak</h4>
                             </div>
                             <div className="flex justify-evenly gap-3">
-                                <div className={`bg-gradient-to-r ${passwordPower < 4 ? "from-[#c5c5c5] to-[#f3f3f3]" : "from-[#D0585F] to-[#E99C53]"} border-gray-300 border-2 w-1/4 h-3 rounded-2xl`}></div>
-                                <div className={`bg-gradient-to-r ${passwordPower < 3 ? "from-[#c5c5c5] to-[#f3f3f3]" : "from-[#ECA551] to-[#FDD448]"} border-gray-300 border-2 w-1/4 h-3 rounded-2xl`}></div>
-                                <div className={`bg-gradient-to-r ${passwordPower < 2 ? "from-[#c5c5c5] to-[#f3f3f3]" : "from-[#F5D449] to-[#B0C154]"} border-gray-300 border-2 w-1/4 h-3 rounded-2xl`}></div>
-                                <div className={`bg-gradient-to-r ${passwordPower < 1 ? "from-[#c5c5c5] to-[#f3f3f3]" : "from-[#A2BE56] to-[#5BAB61]"} border-gray-300 border-2 w-1/4 h-3 rounded-2xl`}></div>
+                                <div className={`bg-gradient-to-r ${passwordPower < 4 ? "from-[#c5c5c5] to-[#f3f3f3]" : "from-[#D0585F] to-[#E99C53]"} border-gray-300 dark:border-[#212226] border-2 w-1/4 h-3 rounded-2xl`}></div>
+                                <div className={`bg-gradient-to-r ${passwordPower < 3 ? "from-[#c5c5c5] to-[#f3f3f3]" : "from-[#ECA551] to-[#FDD448]"} border-gray-300 dark:border-[#212226] border-2 w-1/4 h-3 rounded-2xl`}></div>
+                                <div className={`bg-gradient-to-r ${passwordPower < 2 ? "from-[#c5c5c5] to-[#f3f3f3]" : "from-[#F5D449] to-[#B0C154]"} border-gray-300 dark:border-[#212226] border-2 w-1/4 h-3 rounded-2xl`}></div>
+                                <div className={`bg-gradient-to-r ${passwordPower < 1 ? "from-[#c5c5c5] to-[#f3f3f3]" : "from-[#A2BE56] to-[#5BAB61]"} border-gray-300 dark:border-[#212226] border-2 w-1/4 h-3 rounded-2xl`}></div>
                             </div>
                         </div>
                     </div>
