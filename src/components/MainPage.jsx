@@ -37,7 +37,7 @@ function MainPage() {
         </div>
       </div>
       <div className={`flex justify-evenly items-center border-[#282C30] border-solid border-2 rounded-2xl dark:bg-[#12181D] dark:text-white bg-[#FFFFFF] text-black mt-6 p-1`}>
-        <Link onClick={() => contetntHandler(1)} to='/setting' className={`${ bg === 1 ? "dark:bg-[#212226] bg-[#F2F3F3]" : "" } flex items-center w-full py-6 px-20 rounded-2xl`}>
+        <Link onClick={() => contetntHandler(1)} to='' className={`${ bg === 1 ? "dark:bg-[#212226] bg-[#F2F3F3]" : "" } flex items-center w-full py-6 px-20 rounded-2xl`}>
           <Lock1 size={32} />
           <div className="ml-4">
             <h3 className='text-base font-normal font-[poppins]'>Security</h3>
@@ -45,7 +45,7 @@ function MainPage() {
           </div>
         </Link>
         <div className="w-0.5 bg-[#282C30] h-16 m-1"></div>
-        <Link onClick={() => contetntHandler(2)} to='/setting/lorem' className={`${ bg === 2 ? "dark:bg-[#212226] bg-[#F2F3F3]" : "" } flex items-center w-full py-6 px-20 rounded-2xl`}>
+        <Link onClick={() => contetntHandler(2)} to='/setting/api' className={`${ bg === 2 ? "dark:bg-[#212226] bg-[#F2F3F3]" : "" } flex items-center w-full py-6 px-20 rounded-2xl`}>
           <BuyCrypto size={32} />
           <div className="ml-4">
             <h3 className='text-base font-normal font-[poppins]'>API</h3>
@@ -61,9 +61,11 @@ function MainPage() {
           </div>
         </Link>
       </div>
+
       <>
       <Routes>
-        <Route index path='/setting/' element={<ChangePass />} />
+        <Route index path='' element={<ChangePass />} />
+        <Route path='/setting/api' element={<Lorem/>} />
         <Route path='/setting/lorem' element={<Lorem/>} />
       </Routes>
       </>
