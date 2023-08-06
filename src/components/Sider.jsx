@@ -49,7 +49,7 @@ const Sider = () => {
                 {NavbarItems.map((item,index) => {
                     return (
                         <div>
-                            <li onClick={() => navHandler(index)} className='flex items-center font-normal my-3 dark:text-[#f2f3f3] text-black font-[poppins]'>
+                            <li onClick={() => navHandler(index)} className='flex items-center font-normal my-3 dark:text-[#f2f3f3] text-black font-[poppins] cursor-pointer'>
                                 <div className={`${clickState === index ? "active" : "hidden" } w-1 h-9 bg-[#4BA663] rounded-2xl `}></div>
                                 <div className={`${clickState === index ? "bg-[#4BA663]" : "bg-[#535B62]" } p-2 mx-4 rounded-lg`}>
                                     {item.icon}
@@ -61,7 +61,7 @@ const Sider = () => {
                 })}
             </div>
             <div className=''>
-                <div className='flex items-center text-base font-normal dark:text-[#f2f3f3] text-black font-[poppins]'>
+                <div className='flex items-center text-base font-normal dark:text-[#f2f3f3] text-black font-[poppins] cursor-pointer'>
                     <div className='w-1 bg-[#D0585F] rounded-2xl h-10'></div>
                     <div className="bg-[#D0585F] p-2 mx-4 rounded-lg">
                         <LogoutCurve color='#FFFFFF' />
@@ -69,7 +69,7 @@ const Sider = () => {
                     {open && "Log out"}
                 </div>
             </div>
-            <div onClick={handleNav} className={`absolute bottom-4 py-2 bg-[#535B62] rounded-l-full ${!open ? "origin-center rotate-180 -right-6 " : "rotate-0 right-0 "}  `}>
+            <div onClick={handleNav} className={`absolute bottom-4 py-2 bg-[#535B62] rounded-l-full cursor-pointer ${!open ? "origin-center rotate-180 -right-6 " : "rotate-0 right-0 "}  `}>
                 <ArrowLeft2 color='#FFFFFF ' />
             </div>
 

@@ -76,7 +76,7 @@ function ChangePass() {
     const openMessage = () => {
         message.loading({ content: 'Loading...', key , className:"text-lg"});
         setTimeout(() => {
-          message.success({ content: 'Successfully sent!', key, duration: 2, className:"text-lg"});
+          message.success({ content: 'Successfully set!', key, duration: 2, className:"text-lg"});
         }, 3000);
       };
 
@@ -93,7 +93,7 @@ function ChangePass() {
                         <Input.Password placeholder='Old Password' className='px-5 py-3 dark:bg-[#2B333D] border-[#2B333D] passwordInput' />
                         <Input.Password placeholder='New Password' className='my-6 px-5 py-3 dark:bg-[#2B333D] border-[#2B333D] passwordInput' onChange={(e) => handleChange(e.target.value)} />
                         <Input.Password placeholder='Confirm password' className='px-5 py-3 dark:bg-[#2B333D] border-[#2B333D] passwordInput' onChange={(e) => checkHandler(e.target.value)} />
-                        <button type='submit' className={`mt-6 w-full py-4 ${submit && "bg-[#4BA663]"} rounded-lg font-lg font-bold font-[roboto] border-[#4BA663] border-2 dark:text-white text-black`}>Change Password</button>
+                        <button type='submit' className={`mt-6 w-full py-4 ${!submit && 'opacity-50'} bg-[#4BA663] border-[#4BA663] rounded-lg font-lg font-bold font-[roboto] border-2 dark:text-white text-black`}>Change Password</button>
                     </Form>
                     <div className="w-1/2">
                         <div>
