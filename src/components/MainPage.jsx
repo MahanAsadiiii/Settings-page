@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Moon, Sun1 } from 'iconsax-react'
 import { ChangePass, Lorem } from './Index';
 import { Lock1, BuyCrypto, Wallet1 } from "iconsax-react"
-import {  Route, Routes ,Link ,Navigate } from 'react-router-dom'
+import {  Route, Routes ,Link  } from 'react-router-dom'
 
 
 function MainPage() {
@@ -27,7 +27,7 @@ function MainPage() {
 
   return (
 
-    <div className="bg-white dark:bg-[#12181D] text-black dark:text-white w-full p-6">
+    <div className=" text-black dark:text-white  p-6">
       <div className={`flex justify-between `}>
         <h2 className='text-3xl font-normal font-[poppins]'>Settings</h2>
         <div className={`flex items-center rounded-3xl w-16 h-10 p-1 justify-end dark:bg-[#535B62] bg-yellow-400 }`}>
@@ -37,7 +37,7 @@ function MainPage() {
         </div>
       </div>
       <div className={`flex justify-evenly items-center border-[#282C30] border-solid border-2 rounded-2xl dark:bg-[#12181D] dark:text-white bg-[#FFFFFF] text-black mt-6 p-1`}>
-        <Link onClick={() => contetntHandler(1)} to='' className={`${ bg === 1 ? "dark:bg-[#212226] bg-[#F2F3F3]" : "" } flex items-center w-full py-6 px-20 rounded-2xl`}>
+        <Link onClick={() => contetntHandler(1)} to='' className={`${ bg === 1 ? "dark:bg-[#212226] bg-[#dedede]" : "" } flex items-center w-full py-6 px-20 rounded-2xl`}>
           <Lock1 size={32} />
           <div className="ml-4">
             <h3 className='text-base font-normal font-[poppins]'>Security</h3>
@@ -45,7 +45,7 @@ function MainPage() {
           </div>
         </Link>
         <div className="w-0.5 bg-[#282C30] h-16 m-1"></div>
-        <Link onClick={() => contetntHandler(2)} to='/setting/api' className={`${ bg === 2 ? "dark:bg-[#212226] bg-[#F2F3F3]" : "" } flex items-center w-full py-6 px-20 rounded-2xl`}>
+        <Link onClick={() => contetntHandler(2)} to='/setting/api' className={`${ bg === 2 ? "dark:bg-[#212226] bg-[#dedede]" : "" } flex items-center w-full py-6 px-20 rounded-2xl`}>
           <BuyCrypto size={32} />
           <div className="ml-4">
             <h3 className='text-base font-normal font-[poppins]'>API</h3>
@@ -53,7 +53,7 @@ function MainPage() {
           </div>
         </Link>
         <div className="w-0.5 bg-[#282C30] h-16 m-1"></div>
-        <Link onClick={() => contetntHandler(3)} to='/setting/lorem' className={`${ bg === 3 ? "dark:bg-[#212226] bg-[#F2F3F3]" : "" } flex items-center w-full py-6 px-20 rounded-2xl`}>
+        <Link onClick={() => contetntHandler(3)} to='/setting/lorem' className={`${ bg === 3 ? "dark:bg-[#212226] bg-[#dedede]" : "" } flex items-center w-full py-6 px-20 rounded-2xl`}>
           <Wallet1 size={32} />
           <div className="ml-4">
             <h3 className='text-base font-normal font-[poppins]'>Lorem Ipsum</h3>
