@@ -7,11 +7,11 @@ const Layout = ({ children }) => {
 
 
   return (
-    <div className='flex bg-white dark:bg-[#12181D]'>
+    <div className='flex min-h-screen bg-white dark:bg-[#12181D]'>
       <Sider />
-      {children}
+      <div className="h-full flex-1">{children}</div>
     </div>
   )
 
 }
-export default Layout 
+export {Layout} 
