@@ -15,7 +15,7 @@ const Sider = () => {
     }
 
     return (
-        <div className={`relative flex flex-col justify-between min-h-screen gap-10  bg-[#F2F3F3] dark:bg-[#111418] ease-in-out duration-200 py-4 px-6 ${open ? "md:w-3/12  " : "items-center w-0 lg:-left-0 lg:w-1/12 px-0 lg:px-6 "} `}>
+        <div className={`relative flex flex-col justify-between min-h-screen gap-10  bg-[#F2F3F3] dark:bg-[#111418] ease-in-out duration-200 py-4 px-6 ${open ? "md:w-3/12" : "items-center w-0 lg:-left-0 lg:w-1/12 px-0 lg:px-6"} `}>
 
             <div className={`flex flex-col justify-between ${!open && "hidden lg:flex"}`}>
                 <div className={`hidden flex-col items-center dark:bg-[#212226] bg-white px-5 pt-8 pb-5 rounded-2xl mb-5 mt-12 ${open && "lg:flex"}`}>
