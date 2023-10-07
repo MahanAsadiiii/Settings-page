@@ -4,7 +4,7 @@ import { profile } from '../utilities/Index';
 import NavbarItems from './Static';
 
 const Sider = () => {
-    const [open, setopen] = useState(true)
+    const [open, setopen] = useState(false)
     const [clickState, setClickState] = useState(5)
 
     const handleNav = () => {
@@ -66,7 +66,7 @@ const Sider = () => {
 
             </div>
 
-            <div className='flex justify-center md:justify-start items-center'>
+            <div className='flex justify-center lg:justify-start items-center'>
                 <div className={`flex items-center text-base font-normal dark:text-[#f2f3f3] text-black font-[poppins] cursor-pointer ${!open && "hidden lg:flex"}`}>
                     <div className='w-1 bg-[#D0585F] rounded-2xl h-14 lg:h-9'></div>
                     <div className="flex flex-col lg:flex-row items-center">
@@ -76,7 +76,7 @@ const Sider = () => {
                         <div className="text-sm lg:text-base">{open && "Log out"}</div>
                     </div>
                 </div>
-                <div onClick={handleNav} className={`absolute bottom-4 py-2 bg-[#535B62] rounded-l-full cursor-pointer ${!open ? "origin-center rotate-180 -right-6 " : "rotate-0 right-0 "}  `}>
+                <div onClick={handleNav} className={`absolute top-20 lg:top-auto lg:bottom-4 py-2 bg-[#4BA663] rounded-l-full cursor-pointer ${!open ? "origin-center rotate-180 -right-6 " : "rotate-0 right-0 "}  `}>
                     <ArrowLeft2 color='#FFFFFF ' />
                 </div>
             </div>

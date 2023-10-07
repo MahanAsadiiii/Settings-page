@@ -19,7 +19,7 @@ const NavbarItems = [
     },
     {
         icon: <Trade color='#FFFFFF' />,
-        label: "Dashboard" ,
+        label: "Trade" ,
         id:4
     },
     {
